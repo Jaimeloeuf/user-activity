@@ -66,6 +66,13 @@ Based on the specified requirements, we can build a system that is:
 - Timestamp will be posted so URL can't be shared. The timestamp is like a pass code than is server generated, so server will compare value against the pass code they generated.
 
 
+## Todo
+### SUPER IMPORTANT
+- Fix this by removing seperation of express app from index.js
+    - Because if the misc routes are mounted before the user routes, especially the ones that deal with the errors.  
+    - If the error handlers are defined before the normal route handlers, then it will always defaule to the error handler, or when there is an error thrown, the error handler cant catch it because it has already pass.
+
+
 ## License
 This is project is made available open source under the    liscense!  
 However do use this at your own risk, there may be breaking changes and all.  
